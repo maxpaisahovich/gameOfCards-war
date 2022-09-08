@@ -20,6 +20,10 @@ export default class Deck {
     this.cards = cards;
   }
 
+  get numberOfCards() {
+    return this.cards.length;
+  }
+
   shuffle() {
     let deck = this.cards;
     let n = this.cards.length;
@@ -42,6 +46,18 @@ class Card {
   constructor(suit, value) {
     this.suit = suit;
     this.value = value;
+  }
+
+  get color() {
+    return this.suit === "♣" || this.suit === "♠" ? "black" : "red";
+  }
+
+  getHTML() {
+    let cardDiv = document.createElement("div");
+    cardDiv.innerText = this.suit;
+    cardDiv.classList.add("card", this.color);
+    cardDiv.dataset.value = `${this.value} ${this.suit}`;
+    return cardDiv;
   }
 }
 
