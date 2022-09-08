@@ -24,6 +24,14 @@ export default class Deck {
     return this.cards.length;
   }
 
+  popCard() {
+    return this.cards.shift();
+  }
+
+  push(card) {
+    return this.cards.push(card);
+  }
+
   shuffle() {
     let deck = this.cards;
     let n = this.cards.length;
