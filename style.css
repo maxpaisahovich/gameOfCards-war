@@ -7,13 +7,7 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: repeat(2, 6rem);
-  grid-template-rows: 10rem 2rem 10rem;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 1rem;
-  cursor: pointer;
+  position: relative;
 }
 
 .deck {
@@ -26,6 +20,32 @@ body {
   align-items: center;
   font-size: 3rem;
   user-select: none;
+}
+
+.comp {
+  font-size: 2rem;
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+  user-select: none;
+}
+
+.player {
+  font-size: 2rem;
+  position: absolute;
+  top: 18rem;
+  left: 4rem;
+  user-select: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  grid-template-rows: 10rem 2rem 10rem;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .computer-deck {
@@ -41,6 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .card {
